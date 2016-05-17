@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using COMP123_S2016_Lesson2;
 namespace UnitTestForLession2
 {
     [TestClass]
@@ -9,6 +9,16 @@ namespace UnitTestForLession2
         [TestMethod]
         public void TestMethod1()
         {
+
+            //Arrange
+
+
+            //Act
+
+
+            //Assert
+
+
         }
     }
 }
