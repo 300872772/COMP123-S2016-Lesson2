@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Date: May 17, 2016
  * Date Modified: May 17, 2016
  * Description: Advanced Methods Demo for Lesson2
- * Version: 0.0.4 - added Test addYtoXTestMethod and run test
+ * Version: 0.0.5 - added readUntilEnd Method
  */
 
 
@@ -45,6 +45,10 @@ namespace COMP123_S2016_Lesson2
             addYtoX(ref x,ref y);
 
             Console.WriteLine(x);
+
+            Console.WriteLine(readUntilEnd());
+
+
         }
 
         /**
@@ -75,6 +79,38 @@ namespace COMP123_S2016_Lesson2
 
            return X += Y;
 
+        }
+
+
+        public static string [] readUntilEnd()
+        {
+
+            string[] inputs= new string[50];
+
+            int inputCounter = 0;
+
+           
+
+
+            do
+            {
+                Console.WriteLine("Enter a Value ('end' to stop): ");
+
+                inputs[inputCounter] = Console.ReadLine();
+                if (inputs[inputCounter]=="end")
+                {
+
+                    inputCounter = -1;
+                }
+                else
+                {
+                    inputCounter++;
+                }
+               
+            } while (inputCounter!=-1);
+
+
+            return inputs; 
         }
     }
 }
