@@ -46,9 +46,20 @@ namespace COMP123_S2016_Lesson2
 
             Console.WriteLine(x);
 
-            Console.WriteLine(readUntilEnd());
+            int numberOfEntries;
+
+          
+                Console.Write("How many entries do you want to make?");
+                int.TryParse(Console.ReadLine(),out numberOfEntries);
+
+               if( numberOfEntries>0)
+                {
+
+                    readUntilEnd(numberOfEntries);
+                }
 
 
+          
         }
 
         /**
@@ -82,20 +93,21 @@ namespace COMP123_S2016_Lesson2
         }
 
 
-        public static string [] readUntilEnd()
+        public static string [] readUntilEnd( int numberOfEntries)
         {
 
-            string[] inputs= new string[50];
+            string[] inputs;
 
-            int inputCounter = 0;
+          int inputCounter=0;
+          inputs = new string[numberOfEntries];
 
-           
 
 
             do
             {
+              
                 Console.WriteLine("Enter a Value ('end' to stop): ");
-
+              //  inputs[inputCounter] = "";
                 inputs[inputCounter] = Console.ReadLine();
                 if (inputs[inputCounter]=="end")
                 {
@@ -109,7 +121,7 @@ namespace COMP123_S2016_Lesson2
                
             } while (inputCounter!=-1);
 
-
+      
             return inputs; 
         }
     }

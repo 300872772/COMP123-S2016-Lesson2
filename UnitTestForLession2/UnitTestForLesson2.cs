@@ -44,5 +44,24 @@ namespace UnitTestForLession2
 
 
         }
+
+
+        [TestMethod]
+        public void readUntilEndTestMethod()
+        {
+
+            //Arrange
+            string[] returnedArray;
+
+
+            //Act
+            returnedArray = Program.readUntilEnd();
+
+            //Assert
+            Assert.IsTrue(returnedArray.Length == 0);
+
+
+        }
+
     }
 }
