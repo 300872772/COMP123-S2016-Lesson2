@@ -51,11 +51,15 @@ namespace UnitTestForLession2
         {
 
             //Arrange
-            string[] returnedArray;
+           
+            int numberOfEntries = 5;
+            string[] returnedArray = new string[numberOfEntries];
 
 
             //Act
-            returnedArray = Program.readUntilEnd();
+            returnedArray = Program.readUntilEnd(numberOfEntries);
+            Console.WriteLine(returnedArray.Length);
+
 
             //Assert
             Assert.IsTrue(returnedArray.Length == 0);

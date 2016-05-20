@@ -92,8 +92,15 @@ namespace COMP123_S2016_Lesson2
 
         }
 
+        /**
+         * this methd llows the user tp make a variable number 0f string entries into a string array
+         * 
+         * @method addYtoX
+         * @param {int} numberOfEntries
+         * @return {int}
+         * */
 
-        public static string [] readUntilEnd( int numberOfEntries)
+        public static int readUntilEnd( int numberOfEntries)
         {
 
             string[] inputs;
@@ -107,22 +114,53 @@ namespace COMP123_S2016_Lesson2
             {
               
                 Console.WriteLine("Enter a Value ('end' to stop): ");
-              //  inputs[inputCounter] = "";
+                inputs[inputCounter] = "";
                 inputs[inputCounter] = Console.ReadLine();
-                if (inputs[inputCounter]=="end")
-                {
 
-                    inputCounter = -1;
-                }
-                else
-                {
                     inputCounter++;
-                }
-               
-            } while (inputCounter!=-1);
+           
+            } while ((inputs[inputCounter-1]!="end") && (inputCounter < numberOfEntries));
 
       
-            return inputs; 
+            return inputCounter; 
+        }
+
+
+
+        /**
+        * this methd llows the user tp make a variable number 0f string entries into a string array
+        * 
+        * @method addYtoX
+        * @param {int} numberOfEntries
+        * @return {int}
+        * */
+
+        public static string[] readUntilEnd()
+        {
+            //variable declearation
+
+            int numberOfEntries = 5;
+
+            string[] inputs = new string[numberOfEntries];
+
+            int inputCounter = 0;
+            
+
+            //execution of code
+
+            do
+            {
+
+                Console.WriteLine("Enter a Value ('end' to stop): ");
+                inputs[inputCounter] = "";
+                inputs[inputCounter] = Console.ReadLine();
+
+                inputCounter++;
+
+            } while ((inputCounter != -1) && (inputCounter < numberOfEntries));
+
+
+            return inputs;
         }
     }
 }
